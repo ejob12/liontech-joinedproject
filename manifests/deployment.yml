@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ejobliontechjoinedproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ejobliontechjoinedproject
+  template:
+    metadata:
+      labels:
+        app: ejobliontechjoinedproject 
+    spec:
+      containers:
+        - name: ejobliontechjoinedproject 
+          image: ejbcicd.azurecr.io/ejobliontechjoinedproject
+          ports:
+          - containerPort: 80
